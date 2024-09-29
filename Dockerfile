@@ -8,7 +8,7 @@ RUN apt-get update -y
 RUN apt-get install -y git
 
 # Clone your GitHub repository
-RUN git clone https://github.com/AjiMk/100-days-of-devops-challenge.git
+RUN git clone https://github.com/AjiMk/100-days-of-devops-challenge.git || (cd 100-days-of-devops-challenge && git pull)
 
 # Copy the contents to the scripts directory if needed (modify as necessary)
 RUN cp -r 100-days-of-devops-challenge/scripts .
